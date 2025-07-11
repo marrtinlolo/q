@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cocos de la Sierra</title>
+  <style>
+    /* Tu estilo actual */
+    @import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
+    body { font-family: 'UnifrakturMaguntia', cursive; background-color: #f0f0f0; color: #333; margin:0; padding:0; text-align:center; }
+    h1,h2 { margin:20px 0; }
+    .texto { margin:20px auto; padding:15px; border-radius:10px; max-width:800px; box-shadow:0 4px 8px rgba(0,0,0,0.1); }
+    .texto1 { background-color:#ffcccc; color:#ff0000; }
+    .texto2 { background-color:#ccffcc; color:#00cc00; }
+    .texto3 { background-color:#ccccff; color:#0000ff; }
+    .texto4 { background-color:#ffffcc; color:#cc9900; }
+    .texto5 { background-color:#ffccff; color:#cc00cc; }
+    .texto6 { background-color:#ccffff; color:#00cccc; }
+  </style>
+</head>
+<body>
+  <h1>Cocos de la Sierra</h1>
+
+  <!-- Fecha de última actualización -->
+  <div id="fecha-actualizacion">Última actualización: --</div>
+
+  <h2>Explora la belleza natural</h2>
+  <div class="texto texto1"><h3>Texto 1</h3><p>Descubre los paisajes más impresionantes de la sierra.</p></div>
+  <div class="texto texto2"><h3>Texto 2</h3><p>Conoce la flora y fauna que habitan en esta región.</p></div>
+  <div class="texto texto3"><h3>Texto 3</h3><p>Disfruta de las actividades al aire libre que ofrecemos.</p></div>
+  <div class="texto texto4"><h3>Texto 4</h3><p>Explora nuestras rutas de senderismo y ciclismo.</p></div>
+  <div class="texto texto5"><h3>Texto 5</h3><p>... <!-- continúa tu contenido --> </p></div>
+
+  <script>
+    // Mostrar fecha de última modificación
+    (function(){
+      const lm = document.lastModified;
+      const fecha = new Date(lm);
+      const opts = { year: 'numeric', month: '2-digit', day: '2-digit',
+                     hour: '2-digit', minute: '2-digit', second: '2-digit' };
+      document.getElementById('fecha-actualizacion').textContent =
+        'Última actualización: ' + fecha.toLocaleDateString('es-ES', opts);
+    })();
+  </script>
+</body>
+</html>
